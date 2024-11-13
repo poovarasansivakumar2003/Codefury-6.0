@@ -1,128 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthify</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div class="name">
-      <p id="user">Hello, User</p>
-    </div>
-      <div class="loaderClass">
-        <img src="logo.jfif" alt="logoImage" class="lg">
-      </div>
-      <div class="nav-links">
-        <ul style="display: flex; gap: 25px; list-style-type: none;">
-          <li class="nav_item"><a href="#Social media pressure" style="text-decoration: none; scroll-timeline: 5s;">Social media pressure</a></li>
-          <li class="nav_item"><a href="#Information Overload" style="text-decoration: none;">Information Overload</a></li>
-          <li class="nav_item"><a href="#Online Harresment" style="text-decoration: none;">Online Harresment</a></li>
-        </ul>
-      </div>
-      <div id="search-bar" class="search-bar">
-        <input type="text" placeholder="Enter your name" id="userName"/>
-        <button class="btn" onclick="displayName()">Enter</button>
-        
-      </div>
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>    
-        <div class="bar"></div>
-      </div>
-  </header>
-  
-  <div class="main">
-    <img src="cod.jpg" alt="main img" />
-    <div class="main-text">
-      <div class="grid-item grid-span-23 grid-start-s-5 grid-span-s-15">
-        <h1 class="h1" style="color:white; text-align: center;">Find a balance with technology that feels right for you.</h1>
-      </div><div class="subhead-container grid-item grid-span-23 grid-start-s-5 grid-span-s-15">
-        <p class="subhead">As technology becomes more and more integral to everything we do, it can sometimes distract us from the things that matter most to us. <br>
-          We believe technology should improve life, not distract from it. We’re committed to giving everyone the tools they need to develop their own sense of digital wellbeing.<br>
-           So that life, not the technology in it, stays front and center.</p><br>
 
-      </div><iframe width="560" height="315" src="https://www.youtube.com/embed/JVbo_rzu8k0?si=h4CCGtPGxg06O0Fx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <br><br>
-      <div class="socialmediapressure">
-        <h1 id="Social media pressure" style="color:rgb(78, 230, 217); text-align: left; margin-left: 250px;">Social media pressure</h1>
-        <img src="https://mantracare.org/wp-content/uploads/2021/10/Peer-Pressure-Social-Media.jpg" alt="Social media pressure">
-        <p>With the growing science and technology, we are totally dependent on our mobile phones for everything. No one is connected <b>socially</b>
-        but are connected through social medias. People dont want to care about others. They just want entertainment, likes and comments for their posts thats all.
-        <br><b><u>What is social media pressure?</u></b><br><b>Social Media pressure</b> may be referred as the craze and expectations that acan result from using social media platforms.
-        This may include <b>urge for getting likes, yt shorts, insta reels </b>and <b> negative comments</b> that may affect the mindset of individuals specially in youths.</p>
-        <h3>Experienced?</h3><button class="btnoh"><a href="https://docs.google.com/forms/d/e/1FAIpQLSd5ZgX2qqirD1C1k2quDLa494jWlJ65H-fjrY2ZWnP-1j2cNw/viewform?usp=sf_link" target="blank" >Click here</a></button>
-        <div class="clear"></div>
-      </div>
-      <div class="informationoverload">
-        <h1 id="Information Overload" style="color:rgb(78, 230, 217); text-align: right; margin-right: 250px; margin-top: 50px;">Information Overload</h1>
-        <img src="https://media.licdn.com/dms/image/C5112AQEkE34rbJqvKw/article-cover_image-shrink_720_1280/0/1582894581751?e=2147483647&v=beta&t=12mvOt5u6hgBPybMXETSQqt9yj1uGRwjC-h8K6qUqJk" alt="Information Overload">
-        <p>Information overload refers to the excessive amount of information available to a person when they are trying to complete a task or make a decision. It can hinder the decision-making process, leading to poor or no decisions being made.<br>
-           The term was coined by Bertram Gross in his 1964 work, "The Managing of Organizations"¹. Information overload has been a problem throughout history, particularly during the Renaissance and Industrial Revolution periods¹. However, with the advent of the Information Age and access to powerful and low-cost data collection on an automated basis, we now have more information available than ever before¹. Designers need to be especially careful when creating products like websites
-           or apps to prevent information overload from affecting users' experience. Richard Saul Wurman, an information visualization pioneer, described the stress caused by information overload as "information anxiety. 
-          <br>
-          <b><u>How do you stay safe?=></u></b> <a class="iol" href="https://hbr.org/2021/09/how-to-save-yourself-from-information-overload"  target="blank">"How to Save Yourself From “Information Overload”</a><br>
-         </p>
-         <h3>Experienced?</h3>
-         <button class="btnoh"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdWOWeEyFHd8aKpBQeMELDvzO7Rakq-D77E8yt9Pn82ITZfjA/viewform?usp=sf_link" target="blank" >Click here</a></button>
-        <div class="clear"></div>
-      </div>
-      <div class="socialmediapressure">
-        <h1 id="Online Harresment" style="color:rgb(78, 230, 217); text-align: left; margin-left: 250px; margin-top: 50px;">Online Harresment</h1>
-        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2017/10/onlineharassment-1507116585.jpg" alt="Online harresment">
-        <p>Online harassment can be defined as the use of information and communication technologies by an individual or group 
-        to repeatedly cause harm to another person. This may involve threats, embarrassment, or humiliation in an online setting.
-        Online harassment is when someone uses technology -- like cellphones, computers, social media, or gaming platforms -- to bully, threaten, or aggressively hassle someone. A form of cyberbullying, online harassment includes name-calling, stalking, and physical threats. Girls and LGBTQ+ individuals are more likely to experience these types of harassment and abuse.
-        <h3>Experienced?</h3>
-        <button class="btnoh"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfAFpYg7AcirzosmAdFaSS3wT5bT9UqxCTNnONmVi6O4v3IQQ/viewform?usp=sf_link" target="blank" >Click here</a></button>
-  
-      <br> <b>Websites that may help you to stay safe</b><br>
-      <ul><a href="https://www.leadindia.law/blog/en/protect-yourself-from-online-harassment/" class="iol" target="blank">Source</a></ul>
+<body class="font-sans bg-gray-900 text-white">
+    <header class="flex items-center justify-between bg-black text-gray-400 p-6 shadow-lg">
+        <!-- Logo and Greeting -->
+        <div class="flex items-center space-x-4">
+            <img src="logo.jfif" alt="Logo" class="w-12 h-12 rounded-full transition-transform duration-300 hover:scale-110">
+            <div class="text-2xl font-semibold text-blue-200">Hello, User</div>
+        </div>
     
-     
-         </p>
-        <div class="clear"></div>
-      </div>
-    </div>
-   
-  </div>
-  
-  <div class="footer">
-    <div class="footer-container">
-      
-      <div class="footer-row">
-        <div class="first">
-         
-          <h3>Get our App</h3>
-          <p>Download App for Android and ios mobile phone.</p>
+        <!-- Navigation Links (Hidden on small screens) -->
+        <nav id="desktopNav" class="hidden lg:flex items-center space-x-6">
+            <a href="#social-media-pressure" class="text-blue-200 hover:text-blue-100 transition duration-300">Social Media Pressure</a>
+            <a href="#information-overload" class="text-blue-200 hover:text-blue-100 transition duration-300">Information Overload</a>
+            <a href="#online-harassment" class="text-blue-200 hover:text-blue-100 transition duration-300">Online Harassment</a>
+            <!-- Search Bar -->
+        <div class="flex items-center space-x-2">
+            <input type="text" placeholder="Enter your name" id="userName" class="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300" onclick="displayName()">Enter</button>
         </div>
-        <div class="second">
-            <img src="logo.jfif" alt="logo" width="100px" height="100px" />
-            <h3>Healthify</h3>
-          </a>
+        </nav>
+    
+        
+    
+        <!-- Hamburger Icon for Mobile (Visible on small screens only) -->
+        <button class="lg:hidden flex flex-col items-center space-y-1" onclick="toggleMobileMenu()">
+            <span class="w-6 h-0.5 bg-blue-200"></span>
+            <span class="w-6 h-0.5 bg-blue-200"></span>
+            <span class="w-6 h-0.5 bg-blue-200"></span>
+        </button>
+    </header>
+    
+    <!-- Mobile Menu (Toggled by Hamburger Icon) -->
+    <nav id="mobileNav" class="lg:hidden hidden flex flex-col items-center bg-black text-gray-400 p-4 space-y-4">
+        <a href="#social-media-pressure" class="text-blue-200 hover:text-blue-100 transition duration-300">Social Media Pressure</a>
+        <a href="#information-overload" class="text-blue-200 hover:text-blue-100 transition duration-300">Information Overload</a>
+        <a href="#online-harassment" class="text-blue-200 hover:text-blue-100 transition duration-300">Online Harassment</a>
+        <!-- Search Bar -->
+        <div class="flex items-center space-x-2">
+            <input type="text" placeholder="Enter your name" id="userName" class="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300" onclick="displayName()">Enter</button>
         </div>
-        <div class="second">
-          <h3>Useful Links</h3>
-          <ul>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
-            <li>Return Policy</li>
-            <li>Discount Coupons</li>
-          </ul>
+    </nav>
+    
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById("mobileNav").classList.toggle("hidden");
+        }
+    
+        function displayName() {
+            const userName = document.getElementById("userName").value;
+            alert(`Hello, ${userName}!`);
+        }
+    </script>    
+    
+    <main class="mt-8">
+        <section class="relative text-center">
+            <img src="cod.jpg" alt="main image" class="w-full h-96 object-cover opacity-75">
+            <div class="absolute top-24 inset-x-0 mx-auto text-white">
+                <h1 class="text-3xl font-bold">Find a balance with technology that feels right for you.</h1>
+                <p class="text-lg mt-4 px-4">As technology becomes more integral, it can distract from what matters
+                    most. We provide tools to enhance digital wellbeing, keeping life at the forefront.</p>
+            </div>
+        </section>
+
+        <section id="Social-media-pressure" class="my-8 px-4 lg:px-16">
+            <h2 class="text-2xl font-bold text-teal-300 mb-4">Social media pressure</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-6">
+                <img src="https://mantracare.org/wp-content/uploads/2021/10/Peer-Pressure-Social-Media.jpg"
+                    alt="Social media pressure" class="w-full lg:w-1/2 h-48 object-cover">
+                <p class="text-lg">With the growing science and technology, we are heavily reliant on mobile phones.
+                    Social connections are replaced with social media, fostering a craze for likes, comments, and
+                    entertainment.</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5ZgX2qqirD1C1k2quDLa494jWlJ65H-fjrY2ZWnP-1j2cNw/viewform?usp=sf_link"
+                target="_blank"
+                class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Click here</a>
+        </section>
+
+        <section id="Information-Overload" class="my-8 px-4 lg:px-16">
+            <h2 class="text-2xl font-bold text-teal-300 mb-4 text-right">Information Overload</h2>
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-6">
+                <img src="https://media.licdn.com/dms/image/C5112AQEkE34rbJqvKw/article-cover_image-shrink_720_1280/0/1582894581751?e=2147483647&v=beta&t=12mvOt5u6hgBPybMXETSQqt9yj1uGRwjC-h8K6qUqJk"
+                    alt="Information Overload" class="w-full lg:w-1/2 h-48 object-cover">
+                <p class="text-lg">Information overload can overwhelm, hindering decision-making. With abundant data,
+                    it's critical to filter relevant information to reduce stress and information anxiety.</p>
+            </div>
+            <a href="https://hbr.org/2021/09/how-to-save-yourself-from-information-overload" target="_blank"
+                class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Learn More</a>
+        </section>
+
+        <section id="Online-Harassment" class="my-8 px-4 lg:px-16">
+            <h2 class="text-2xl font-bold text-teal-300 mb-4">Online Harassment</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-6">
+                <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2017/10/onlineharassment-1507116585.jpg"
+                    alt="Online Harassment" class="w-full lg:w-1/2 h-48 object-cover">
+                <p class="text-lg">Online harassment includes cyberbullying, threats, and stalking. It affects
+                    vulnerable groups, including women and LGBTQ+ individuals, leading to mental and emotional distress.
+                </p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAFpYg7AcirzosmAdFaSS3wT5bT9UqxCTNnONmVi6O4v3IQQ/viewform?usp=sf_link"
+                target="_blank" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Get
+                Help</a>
+        </section>
+    </main>
+
+    <footer class="bg-black text-gray-400 p-8 mt-12">
+        <div
+            class="container mx-auto flex flex-col lg:flex-row justify-between items-center text-center lg:text-left gap-8">
+            <div>
+                <h3 class="text-lg font-semibold text-white">Get our App</h3>
+                <p>Download for Android and iOS.</p>
+            </div>
+            <img src="logo.jfif" alt="Healthify Logo" class="w-24 h-24">
+            <div>
+                <h3 class="text-lg font-semibold text-white">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li>Privacy Policy</li>
+                    <li>Terms of Use</li>
+                    <li>Return Policy</li>
+                    <li>Discount Coupons</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-white">Follow Us</h3>
+                <ul class="space-y-2">
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
         </div>
-        <div class="third">
-          <h3>Social Media</h3>
-          <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Youtube</li>
-            <li>Instagram</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
 </body>
+
 </html>
