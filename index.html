@@ -4,134 +4,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthify</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Digital Wellbeing</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        /* Header and Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: #a0a0a0;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-logo img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .nav-logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: #90caf9;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #64b5f6;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 1.5rem;
+            height: 0.125rem;
+            background-color: #90caf9;
+            margin: 0.25rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 24rem;
+            object-fit: cover;
+            opacity: 0.75;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 6rem;
+            left: 0;
+            right: 0;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Sections */
+        .section {
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .section h2 {
+            color: #4db6ac;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .section-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .section-content img {
+            width: 50%;
+            height: 12rem;
+            object-fit: cover;
+        }
+
+        .section-content p {
+            flex: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #2196f3;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #1976d2;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1e1e;
+            padding: 2rem 1rem;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .footer-container h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-container ul {
+            list-style: none;
+        }
+
+        .footer-container ul li {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .section-content,
+            .section-content.reverse {
+                flex-direction: column;
+            }
+
+            .section-content img {
+                width: 100%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 
-<body class="font-sans bg-gray-900 text-white">
-    <header class="flex items-center justify-between bg-black text-gray-400 p-6 shadow-lg">
-        <!-- Logo and Greeting -->
-        <div class="flex items-center space-x-4">
-            <img src="logo.jfif" alt="Logo" class="w-12 h-12 rounded-full transition-transform duration-300 hover:scale-110">
-            <div class="text-2xl font-semibold text-blue-200">Hello, User</div>
-        </div>
-    
-        <!-- Navigation Links (Hidden on small screens) -->
-        <nav id="desktopNav" class="hidden lg:flex items-center space-x-6">
-            <a href="#social-media-pressure" class="text-blue-200 hover:text-blue-100 transition duration-300">Social Media Pressure</a>
-            <a href="#information-overload" class="text-blue-200 hover:text-blue-100 transition duration-300">Information Overload</a>
-            <a href="#online-harassment" class="text-blue-200 hover:text-blue-100 transition duration-300">Online Harassment</a>
-            <!-- Search Bar -->
-        <div class="flex items-center space-x-2">
-            <input type="text" placeholder="Enter your name" id="userName" class="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300">
-            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300" onclick="displayName()">Enter</button>
-        </div>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <img src="logo.jfif" alt="Logo">
+                <span class="greeting">Hello, User</span>
+            </div>
+            <div class="nav-links">
+                <a href="#social-media-pressure">Social Media Pressure</a>
+                <a href="#information-overload">Information Overload</a>
+                <a href="#online-harassment">Online Harassment</a>
+            </div>
+            <div class="nav-menu">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
-    
-        
-    
-        <!-- Hamburger Icon for Mobile (Visible on small screens only) -->
-        <button class="lg:hidden flex flex-col items-center space-y-1" onclick="toggleMobileMenu()">
-            <span class="w-6 h-0.5 bg-blue-200"></span>
-            <span class="w-6 h-0.5 bg-blue-200"></span>
-            <span class="w-6 h-0.5 bg-blue-200"></span>
-        </button>
     </header>
-    
-    <!-- Mobile Menu (Toggled by Hamburger Icon) -->
-    <nav id="mobileNav" class="lg:hidden hidden flex flex-col items-center bg-black text-gray-400 p-4 space-y-4">
-        <a href="#social-media-pressure" class="text-blue-200 hover:text-blue-100 transition duration-300">Social Media Pressure</a>
-        <a href="#information-overload" class="text-blue-200 hover:text-blue-100 transition duration-300">Information Overload</a>
-        <a href="#online-harassment" class="text-blue-200 hover:text-blue-100 transition duration-300">Online Harassment</a>
-        <!-- Search Bar -->
-        <div class="flex items-center space-x-2">
-            <input type="text" placeholder="Enter your name" id="userName" class="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300">
-            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300" onclick="displayName()">Enter</button>
-        </div>
-    </nav>
-    
-    <script>
-        function toggleMobileMenu() {
-            document.getElementById("mobileNav").classList.toggle("hidden");
-        }
-    
-        function displayName() {
-            const userName = document.getElementById("userName").value;
-            alert(`Hello, ${userName}!`);
-        }
-    </script>    
-    
-    <main class="mt-8">
-        <section class="relative text-center">
-            <img src="cod.jpg" alt="main image" class="w-full h-96 object-cover opacity-75">
-            <div class="absolute top-24 inset-x-0 mx-auto text-white">
-                <h1 class="text-3xl font-bold">Find a balance with technology that feels right for you.</h1>
-                <p class="text-lg mt-4 px-4">As technology becomes more integral, it can distract from what matters
-                    most. We provide tools to enhance digital wellbeing, keeping life at the forefront.</p>
+
+    <main>
+        <section class="hero">
+            <img src="cod.jpg" alt="Main Image">
+            <div class="hero-content">
+                <h1>Find a balance with technology that feels right for you.</h1>
+                <p>As technology becomes more integral, it can distract from what matters most. We provide tools to
+                    enhance digital wellbeing, keeping life at the forefront.</p>
             </div>
         </section>
 
-        <section id="Social-media-pressure" class="my-8 px-4 lg:px-16">
-            <h2 class="text-2xl font-bold text-teal-300 mb-4">Social media pressure</h2>
-            <div class="flex flex-col lg:flex-row items-center gap-6">
+        <section id="social-media-pressure" class="section">
+            <h2>Social media pressure</h2>
+            <div class="section-content">
                 <img src="https://mantracare.org/wp-content/uploads/2021/10/Peer-Pressure-Social-Media.jpg"
-                    alt="Social media pressure" class="w-full lg:w-1/2 h-48 object-cover">
-                <p class="text-lg">With the growing science and technology, we are heavily reliant on mobile phones.
-                    Social connections are replaced with social media, fostering a craze for likes, comments, and
-                    entertainment.</p>
+                    alt="Social media pressure">
+                <p>With the growing science and technology, we are heavily reliant on mobile phones. Social connections
+                    are replaced with social media, fostering a craze for likes, comments, and entertainment.</p>
             </div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5ZgX2qqirD1C1k2quDLa494jWlJ65H-fjrY2ZWnP-1j2cNw/viewform?usp=sf_link"
-                target="_blank"
-                class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Click here</a>
+                target="_blank" class="cta-button">Click here</a>
         </section>
 
-        <section id="Information-Overload" class="my-8 px-4 lg:px-16">
-            <h2 class="text-2xl font-bold text-teal-300 mb-4 text-right">Information Overload</h2>
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-6">
+        <section id="information-overload" class="section">
+            <h2>Information Overload</h2>
+            <div class="section-content reverse">
                 <img src="https://media.licdn.com/dms/image/C5112AQEkE34rbJqvKw/article-cover_image-shrink_720_1280/0/1582894581751?e=2147483647&v=beta&t=12mvOt5u6hgBPybMXETSQqt9yj1uGRwjC-h8K6qUqJk"
-                    alt="Information Overload" class="w-full lg:w-1/2 h-48 object-cover">
-                <p class="text-lg">Information overload can overwhelm, hindering decision-making. With abundant data,
-                    it's critical to filter relevant information to reduce stress and information anxiety.</p>
+                    alt="Information Overload">
+                <p>Information overload can overwhelm, hindering decision-making. With abundant data, it's critical to
+                    filter relevant information to reduce stress and information anxiety.</p>
             </div>
             <a href="https://hbr.org/2021/09/how-to-save-yourself-from-information-overload" target="_blank"
-                class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Learn More</a>
+                class="cta-button">Learn More</a>
         </section>
 
-        <section id="Online-Harassment" class="my-8 px-4 lg:px-16">
-            <h2 class="text-2xl font-bold text-teal-300 mb-4">Online Harassment</h2>
-            <div class="flex flex-col lg:flex-row items-center gap-6">
+        <section id="online-harassment" class="section">
+            <h2>Online Harassment</h2>
+            <div class="section-content">
                 <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2017/10/onlineharassment-1507116585.jpg"
-                    alt="Online Harassment" class="w-full lg:w-1/2 h-48 object-cover">
-                <p class="text-lg">Online harassment includes cyberbullying, threats, and stalking. It affects
-                    vulnerable groups, including women and LGBTQ+ individuals, leading to mental and emotional distress.
-                </p>
+                    alt="Online Harassment">
+                <p>Online harassment includes cyberbullying, threats, and stalking. It affects vulnerable groups,
+                    including women and LGBTQ+ individuals, leading to mental and emotional distress.</p>
             </div>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAFpYg7AcirzosmAdFaSS3wT5bT9UqxCTNnONmVi6O4v3IQQ/viewform?usp=sf_link"
-                target="_blank" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Get
-                Help</a>
+                target="_blank" class="cta-button">Get Help</a>
         </section>
     </main>
 
-    <footer class="bg-black text-gray-400 p-8 mt-12">
-        <div
-            class="container mx-auto flex flex-col lg:flex-row justify-between items-center text-center lg:text-left gap-8">
-            <div>
-                <h3 class="text-lg font-semibold text-white">Get our App</h3>
+    <footer>
+        <div class="footer-container">
+            <div class="app-download">
+                <h3>Get our App</h3>
                 <p>Download for Android and iOS.</p>
             </div>
-            <img src="logo.jfif" alt="Healthify Logo" class="w-24 h-24">
-            <div>
-                <h3 class="text-lg font-semibold text-white">Useful Links</h3>
-                <ul class="space-y-2">
+
+            <img src="logo.jfif" alt="Healthify Logo" class="footer-logo">
+
+            <div class="useful-links">
+                <h3>Useful Links</h3>
+                <ul>
                     <li>Privacy Policy</li>
                     <li>Terms of Use</li>
                     <li>Return Policy</li>
                     <li>Discount Coupons</li>
                 </ul>
             </div>
-            <div>
-                <h3 class="text-lg font-semibold text-white">Follow Us</h3>
-                <ul class="space-y-2">
+
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <ul>
                     <li>Facebook</li>
                     <li>Twitter</li>
                     <li>YouTube</li>
